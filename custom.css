@@ -39,26 +39,6 @@ body {
   --table-border-color:         #e5e7eb;
 }
 
-
-html[data-theme=light], #root > div, .theme-inner {
-  --ls-title-text-color:          var(--tw-prose-headings);
-  --ls-primary-text-color:        var(--text-black);
-  --ls-secondary-text-color:      var(--text-coolgray-900);
-  --ls-tag-text-color:            var(--text-accent);
-  --ls-link-text-color:           var(--text-accent);
-  --ls-block-bullet-color:        var(--bg-gray-300);
-  --ls-link-ref-text-color:       var(--text-accent);
-  --ls-link-text-hover-color:     var(--text-accent);
-  --ls-border-color:              var(--border-gray-100);
-  --ls-quaternary-background-color:   var(--bg-gray-200\/50);
-  --ls-tertiary-background-color:     var(--bg-gray-200\/50);
-  --bg-left-sidebar:                  var(--bg-coolgray-50);
-  --border-primary:                   var(--border-coolgray-900\/15);
-  --text-tertiary:                    var(--text-coolgray-400);
-  --text-quaternary:                    var(--text-coolgray-400);
-}
-
-/* color config */
 .dark-theme, html[data-theme=dark] {
   --tw-bg-opacity:              1;
   --tw-text-opacity:            1;
@@ -84,10 +64,11 @@ html[data-theme=light], #root > div, .theme-inner {
   --tw-prose-pre-bg:            #1f2937;
   --tw-prose-pre-code:          #e5e7eb;
   --table-border-color:         #e5e7eb;
+  --bg-gray-800\/30:            rgba(31,41,55,.3);
+  --text-near-white:            rgb(201 209 217/var(--tw-text-opacity));
 }
 
-
-html[data-theme=dark], #root > div, .theme-inner {
+html[data-theme=light], #root > div, .theme-inner {
   --ls-title-text-color:          var(--tw-prose-headings);
   --ls-primary-text-color:        var(--text-black);
   --ls-secondary-text-color:      var(--text-coolgray-900);
@@ -101,9 +82,27 @@ html[data-theme=dark], #root > div, .theme-inner {
   --ls-tertiary-background-color:     var(--bg-gray-200\/50);
   --bg-left-sidebar:                  var(--bg-coolgray-50);
   --border-primary:                   var(--border-coolgray-900\/15);
-  --text-tertiary:                    var(--text-coolgray-400);
-  --text-quaternary:                    var(--text-coolgray-400);
+  --text-tertiary:                    var(--text-coolgray-500);
+  --text-quaternary:                  var(--text-coolgray-400);
 }
+
+/* html[data-theme=dark], #root > div, .theme-inner {
+  --ls-title-text-color:          var(--tw-prose-headings);
+  --ls-primary-text-color:        var(--text-black);
+  --ls-secondary-text-color:      var(--text-near-white);
+  --ls-tag-text-color:            var(--text-accent);
+  --ls-link-text-color:           var(--text-accent);
+  --ls-block-bullet-color:        var(--bg-gray-300);
+  --ls-link-ref-text-color:       var(--text-accent);
+  --ls-link-text-hover-color:     var(--text-accent);
+  --ls-border-color:              var(--border-gray-100);
+  --ls-quaternary-background-color:   var(--bg-gray-200\/50);
+  --ls-tertiary-background-color:     var(--bg-gray-200\/50);
+  --bg-left-sidebar:                  var(--bg-gray-800\/30);
+  --border-primary:                   var(--border-coolgray-900\/15);
+  --text-tertiary:                    var(--text-near-white);
+  --text-quaternary:                  var(--text-coolgray-400);
+} */
 
 /* electron */
 .button#search-button.button.icon{
@@ -204,11 +203,11 @@ html[data-theme=dark], #root > div, .theme-inner {
 
 .left-sidebar-inner .nav-content-item .header .wrap-th>span{
   font-size: 12px;
-  color: var(--text-tertiary);
+  color: var(--text-quaternary);
 }
 
 .left-sidebar-inner .nav-content-item .bd ul a .page-title{
-  color: var(--text-quaternary);
+  color: var(--text-tertiary);
   font-weight: 500;
   font-size: .8125rem;
 }
@@ -548,7 +547,8 @@ display: none;
 .cp__settings-inner .panel-wrap>.it label {
   align-items: center;
   display: flex;
-  color: var(--text-quaternary);
+  color: var(--text-tertiary);
+  opacity: 1;
 }
 
 .cp__settings-inner .theme-modes-options>li>strong{
