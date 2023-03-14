@@ -37,6 +37,25 @@ body {
   --tw-prose-pre-bg:            #1f2937;
   --tw-prose-pre-code:          #e5e7eb;
   --table-border-color:         #e5e7eb;
+  --bg-primary:                 rgb(255 255 255/var(--tw-bg-opacity));
+
+
+  --ls-title-text-color:          var(--tw-prose-headings);
+  --ls-primary-text-color:        var(--text-black);
+  --ls-secondary-text-color:      var(--text-coolgray-900);
+  --ls-tag-text-color:            var(--text-accent);
+  --ls-link-text-color:           var(--text-accent);
+  --ls-block-bullet-color:        var(--bg-gray-300);
+  --ls-link-ref-text-color:       var(--text-accent);
+  --ls-link-text-hover-color:     var(--text-accent);
+  --ls-border-color:              var(--border-gray-100);
+  --ls-quaternary-background-color:   var(--bg-gray-200\/50);
+  --ls-tertiary-background-color:     var(--bg-gray-200\/50);
+  --bg-left-sidebar:                  var(--bg-coolgray-50);
+  --border-primary:                   var(--border-coolgray-900\/15);
+  --text-tertiary:                    var(--text-coolgray-500);
+  --text-quaternary:                  var(--text-coolgray-400);
+  --ls-primary-background-color:      var(--bg-primary);
 }
 
 .dark-theme, html[data-theme=dark] {
@@ -56,59 +75,51 @@ body {
   --bg-gray-200\/50:            rgba(229,231,235,.5);
   --bg-gray-300:                rgb(209 213 219/var(--tw-bg-opacity));
   --bg-gray-800\/30:            rgba(31,41,55,.3);
+  --bg-gray-800:                rgb(31 41 55/var(--tw-border-opacity));
+  --bg-gray-900:                rgb(17 24 39/var(--tw-bg-opacity));
   --border-coolgray-900\/15:    rgba(17,24,39,.15);
   --border-gray-100:            rgb(243 244 246/var(--tw-border-opacity));
-  --tw-prose-headings:          #111827;
-  --tw-prose-code:              #111827;
+  --tw-prose-headings:          var(--text-near-white);
+  --tw-prose-code:              var(--text-near-white);;
   --tw-prose-quote-borders:     #e5e7eb;
   --tw-prose-pre-bg:            #1f2937;
   --tw-prose-pre-code:          #e5e7eb;
   --table-border-color:         #e5e7eb;
-  --bg-gray-800\/30:            rgba(31,41,55,.3);
   --text-near-white:            rgb(201 209 217/var(--tw-text-opacity));
-}
+  --bg-primary:                 rgb(12 17 27/var(--tw-bg-opacity));
+  --bg-black:                   #000000;
+  --border-black:               rgb(0 0 0/var(--tw-border-opacity));
+  --bg-white\/5:                hsla(0,0%,100%,.05);
+  --bg-white\/3:                hsla(0,0%,100%,.03);
+  --text-accent:                rgb(99 102 241/var(--tw-text-opacity));
 
-html[data-theme=light], #root > div, .theme-inner {
-  --ls-title-text-color:          var(--tw-prose-headings);
-  --ls-primary-text-color:        var(--text-black);
-  --ls-secondary-text-color:      var(--text-coolgray-900);
-  --ls-tag-text-color:            var(--text-accent);
-  --ls-link-text-color:           var(--text-accent);
-  --ls-block-bullet-color:        var(--bg-gray-300);
-  --ls-link-ref-text-color:       var(--text-accent);
-  --ls-link-text-hover-color:     var(--text-accent);
-  --ls-border-color:              var(--border-gray-100);
-  --ls-quaternary-background-color:   var(--bg-gray-200\/50);
-  --ls-tertiary-background-color:     var(--bg-gray-200\/50);
-  --bg-left-sidebar:                  var(--bg-coolgray-50);
-  --border-primary:                   var(--border-coolgray-900\/15);
-  --text-tertiary:                    var(--text-coolgray-500);
-  --text-quaternary:                  var(--text-coolgray-400);
-}
 
-/* html[data-theme=dark], #root > div, .theme-inner {
-  --ls-title-text-color:          var(--tw-prose-headings);
-  --ls-primary-text-color:        var(--text-black);
+  --ls-title-text-color:          var(--text-near-white);
+  --ls-primary-text-color:        var(--text-near-white);
   --ls-secondary-text-color:      var(--text-near-white);
   --ls-tag-text-color:            var(--text-accent);
   --ls-link-text-color:           var(--text-accent);
   --ls-block-bullet-color:        var(--bg-gray-300);
   --ls-link-ref-text-color:       var(--text-accent);
   --ls-link-text-hover-color:     var(--text-accent);
-  --ls-border-color:              var(--border-gray-100);
-  --ls-quaternary-background-color:   var(--bg-gray-200\/50);
-  --ls-tertiary-background-color:     var(--bg-gray-200\/50);
+  --ls-border-color:              var(--border-black);
+  --ls-secondary-background-color:    var(--bg-white\/5);
+  --ls-quaternary-background-color:   var(--bg-white\/5);
+  --ls-tertiary-background-color:     var(--bg-white\/3);
   --bg-left-sidebar:                  var(--bg-gray-800\/30);
   --border-primary:                   var(--border-coolgray-900\/15);
   --text-tertiary:                    var(--text-near-white);
   --text-quaternary:                  var(--text-coolgray-400);
-} */
+  --ls-primary-background-color:      var(--bg-primary);
+  --ls-guideline-color:             rgb(55 65 81/var(--tw-border-opacity));
+  --ls-scrollbar-foreground-color:  var(--bg-white\/5);
+}
+
 
 /* electron */
 .button#search-button.button.icon{
   display: none;
 }
-
 
 /* ::selection {
 	background: #8cf;
@@ -126,6 +137,12 @@ html[data-theme=light], #root > div, .theme-inner {
 .left-sidebar-inner {
   background-color: var(--bg-left-sidebar);
   border-right: 			1px solid rgb(229, 231, 235);
+  opacity:            1;
+}
+
+.dark .left-sidebar-inner {
+  background-color: var(--bg-left-sidebar);
+  border-right: 			1px solid var(--border-black);
   opacity:            1;
 }
 
@@ -149,6 +166,11 @@ html[data-theme=light], #root > div, .theme-inner {
   color: var(--text-accent);
 }
 
+.dark .left-sidebar-inner a.item.active{
+  background-color: transparent;
+  color: var(--text-accent);
+}
+
 .ext-sidebar-item, .cp__settings-inner > aside > ul > li.settings-menu-item, #left-sidebar .left-sidebar-inner > .flex .nav-contents-container .favorite-item > .flex, #left-sidebar .left-sidebar-inner > .flex .nav-contents-container .recent-item > .flex, #left-sidebar .left-sidebar-inner > .flex .item {
   gap: 6px;
 }
@@ -164,6 +186,12 @@ html[data-theme=light], #root > div, .theme-inner {
 /* Search 栏的颜色 */
 #left-sidebar .left-sidebar-inner > .flex .create .new-page-link{
     background-color: var(--bg-white);
+    /* box-shadow: none; */
+    border: 1px solid var(--border-primary);
+  }
+
+.dark #left-sidebar .left-sidebar-inner > .flex .create .new-page-link{
+    background-color: var(--bg-white\/5);
     /* box-shadow: none; */
     border: 1px solid var(--border-primary);
   }
@@ -485,17 +513,21 @@ display: none;
     color: var(--ls-secondary-text-color);
     opacity: 1;
     font-size: .8125rem;
+    /* border-radius: 0.8rem */
 }
 
 .dark .cp__palette-main,.dark .cp__select-main,
 .dark .ui__modal-panel .panel-content .ls-search{
-    width: 36rem;
-    background: rgb(17, 24, 39);
-    /* border: 1px solid rgb(55 65 81); */
+    background: var(--bg-gray-900);
 }
 
 .ui__modal-panel .panel-content{
     min-width: 36rem;
+    /* border-radius: 0.8rem */
+}
+
+.dark .ui__modal-panel .panel-content{
+   border: 1px solid rgb(55 65 81/var(--tw-bg-opacity));
 }
 
 /* 搜索框的字重 */
@@ -526,10 +558,20 @@ display: none;
     opacity: 1;
 }
 
+.dark .ui__modal-overlay div{
+  background: var(--bg-black);
+  /* --tw-backdrop-blur: blur(4px); */
+  /* backdrop-filter: var(--tw-backdrop-blur); */
+  opacity: 1;
+}
 
 /* Setting */
 .ui__modal-panel {
   background: var(--bg-white);
+}
+
+.dark .ui__modal-panel {
+  background: var(--bg-gray-800\/30);
 }
 
 /* setting-left-sidebar*/
@@ -561,6 +603,11 @@ display: none;
   border: 1px solid var(--border-primary);
   font-weight: 400;
   font-size: 0.8em;
+}
+
+.dark .ui__button{
+  background-color: var(--bg-gray-900);
+  border: 1px solid var(--bg-gray-800);
 }
 
 .ui__button.p-1 {
