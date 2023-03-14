@@ -1,0 +1,16 @@
+{
+  "name": "Reflect Theme",
+  "author": "natsustan",
+  "version": "0.0.1",
+  "description": "A custom theme inspired by Reflect.",
+  "logseq": {
+    "themes": [
+      {
+        "name": "Reflect Theme",
+        "url": "./custom.css"
+      }
+    ],
+    "id": "logseq-reflect-theme",
+    "icon": "./logo.jpg"
+  }
+}
