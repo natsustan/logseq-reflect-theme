@@ -10,11 +10,20 @@ By the way, I also optimized the layout of the plugins I'm using (including kanb
 
 ## Installation
 
-You can copy `custom.css` into `logseq/custom.css` or paste this line into `logseq/custom.css`:
+You can copy `custom.css` into `~/logseq/custom.css` or paste this line into `~/logseq/custom.css`:
 
 ```
 @import url('https://cdn.jsdelivr.net/gh/natsustan/logseq-reflect-theme@main/custom.css');
 ```
+
+### What's the custom.js?
+
+`custom.js` has two main functions: 
+
+- automatically collapsing "Recent"
+- changing the name "Favorite" to "Pin Notes".
+
+You can copy `custom.js` into `~/logseq/custom.js`
 
 ## Cautions
 
@@ -31,3 +40,4 @@ To customise the theme, use Developer Tools within Logseq to identify the compon
 ## Thanks to
 
 I referred to [logseq-arc-template](https://github.com/andyburris/logseq-arc-theme) for the implementation.
+

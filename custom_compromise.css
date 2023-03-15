@@ -184,12 +184,12 @@ body {
 
 /* Replace Create Page with Search and Make it Top */
 /* Create On Top */
-#left-sidebar .left-sidebar-inner > .flex .create {
+/* #left-sidebar .left-sidebar-inner > .flex .create {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     position: relative;
     order: -1;
-  }
+  } */
 /* Color of Search Box */
 #left-sidebar .left-sidebar-inner > .flex .create .new-page-link{
     background-color: var(--bg-white);

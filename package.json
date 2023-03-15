@@ -1,13 +1,17 @@
 {
   "name": "Reflect Theme",
   "author": "natsustan",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A custom theme inspired by Reflect.",
   "logseq": {
     "themes": [
       {
         "name": "Reflect Theme",
         "url": "./custom.css"
+      },
+      {
+        "name": "Reflect Theme without customized search box",
+        "url": "./custom_Compromise.css"
       }
     ],
     "id": "logseq-reflect-theme",
