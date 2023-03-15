@@ -2,7 +2,11 @@
 
 This is a theme inspired by [Reflect.app](https://reflect.app/).
 
-I will continue to improve it in the future.
+Logseq is an excellent open-source product. It has complete functions, but in some aspects it performs a bit rough and lacks design elements that focus on visual experience. After discovering Reflect.app, I realized that Logseq lacked designer support. 
+
+Therefore, I applied the style of Reflect to Logseq and continued to modify and optimize my code to ensure the frequency of updates for this project.
+
+By the way, I also optimized the layout of the plugins I'm using (including kanban, heatmap, logseq-pomodoro-timer). I like to keep the icons in my upper right corner with reasonable spacing, which makes me very comfortable.
 
 ## Installation
 
@@ -22,7 +26,7 @@ By the way, I have also prepared a version without reflect search box style for 
 
 ## Customising
 
-To customise the theme, use Developer Tools within Logseq to identify the components you want to style and add the relevant CSS to your logseq/custom.css file.
+To customise the theme, use Developer Tools within Logseq to identify the components you want to style and add the relevant CSS to your `logseq/custom.css` file.
 
 ## Thanks to
 
