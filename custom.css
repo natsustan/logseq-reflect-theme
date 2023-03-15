@@ -146,6 +146,15 @@ body {
   opacity:            1;
 }
 
+@media (max-width: 400px) {
+  .dark .left-sidebar-inner {
+    background-color: var(--bg-gray-800);
+    border-right: 1px solid var(--border-black);
+    opacity: 1;
+  }
+}
+
+
 /* 点击item */
 .left-sidebar-inner a.item{
   padding-top: 8px;
@@ -299,14 +308,14 @@ h1.title {
 }
 #main-content-container{
   font-size: 15px;
-  line-height: 1.72;
+  line-height: 26px;
 }
 textarea{
   font-size: 1em;
-  line-height: 1.72;
+  line-height: 26px;
 }
 body{
-  line-height: 1.72;
+  line-height: 26px;
 }
 
 /* bullet */
