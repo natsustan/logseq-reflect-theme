@@ -1,19 +1,20 @@
 {
-  "name": "logseq-reflect-theme",
-  "version": "1.0.0",
-  "description": "a theme inspired by Reflect.app",
-  "main": "index.js",
-  "scripts": {
-    "test": "hello world"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/natsustan/logseq-reflect-theme.git"
-  },
+  "name": "Reflect Theme",
   "author": "natsustan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/natsustan/logseq-reflect-theme/issues"
-  },
-  "homepage": "https://github.com/natsustan/logseq-reflect-theme#readme"
+  "version": "0.0.2",
+  "description": "A custom theme inspired by Reflect.",
+  "logseq": {
+    "themes": [
+      {
+        "name": "Reflect Theme",
+        "url": "./custom.css"
+      },
+      {
+        "name": "Reflect Theme without customized search box",
+        "url": "./custom_Compromise.css"
+      }
+    ],
+    "id": "logseq-reflect-theme",
+    "icon": "./logo.jpg"
+  }
 }
