@@ -1,6 +1,13 @@
+/* font import */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap'); */
+
+
 :root {
   /* --ls-left-sidebar-width: 300px; */
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system;
+  /* --font-emoji: Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;    
   --font-mono: JetBrainsMono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
   --ls-tag-text-opacity: 1;
@@ -274,6 +281,21 @@ html[data-theme=dark] .cp__header a, html[data-theme=dark] a.right-sidebar-butto
   color: var(--near-white);
 }
 
+/* emoji */
+/* Replace Inter font with -apple-system for certain emojis */
+/* body {
+  font-variation-settings: "wght" 400;
+}
+body[data-emoji-font="true"] {
+  font-variation-settings: "wght" 400, "opsz" 120;
+} */
+body[data-emoji-font="true"] .emoji {
+  font-family: -apple-system, sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1;
+}
+
 
 /* ---------------------left sidebar-------------------------- */
 
@@ -492,10 +514,11 @@ body {
 }
 
 /* Link Reference*/
-.color-level {
+.fade-enter .color-level {
   background-color: transparent;
   font-size: 0.9em;
 }
+
 .references-blocks .editor-inner textarea {
   font-size: inherit;
 }
