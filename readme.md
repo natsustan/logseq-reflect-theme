@@ -1,6 +1,6 @@
 # Logseq Reflect Theme
 
-This is a theme inspired by [Reflect.app](https://reflect.app/).
+This is a theme inspired by Reflect App.
 
 ![light_mode](./screenshots/reflect_light.png)
 
