@@ -12,7 +12,7 @@
     Liberation Mono, Courier New, monospace;
   --ls-tag-text-opacity: 1;
   --ls-tag-text-hover-opacity: 1;
-  --ls-page-text-size: 14px;
+  --ls-page-text-size: .875rem;
   --ls-page-title-size: 1.4285714em;
   /* --ls-main-content-max-width: 810px;
   --ls-main-content-max-width-wide: 1280px;
@@ -78,8 +78,8 @@ html[data-theme="light"] {
   --app-black: rgb(12 17 27);
   --text-primary: var(--black);
   --text-secondary: var(--coolgray-900);
-  --text-tertiary: var(--gray-500);
-  --text-quarternary: var(--gray-500);
+  --text-tertiary: var(--coolgray-500);
+  --text-quarternary: var(--coolgray-500);
   --header-text: var(--coolgray-900);
   --bg-primary: var(--white);
   --bg-secondary: var(--coolgray-50);
@@ -170,7 +170,7 @@ html[data-theme="light"],
   --ls-secondary-background-color: var(--bg-secondary);
   --ls-tertiary-background-color: var(--bg-tertiary);
   --ls-quaternary-background-color: var(--bg-quaternary);
-  --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
+  --ls-table-tr-even-background-color: var(--bg-primary);
   --ls-active-primary-color: #0069b6;
   --ls-active-secondary-color: #00477c;
   --ls-block-properties-background-color: var(--ls-secondary-background-color);
@@ -234,12 +234,6 @@ html[data-theme="light"],
   --ls-success-background-color: var(--color-green-100);
   --ls-focus-ring-color: rgba(66, 133, 244, 0.5);
   --ls-header-button-background: var(--text-secondary); /*侧边栏的字色*/
-  /* --color-level-1: var(--ls-secondary-background-color);
-    --color-level-2: var(--ls-tertiary-background-color);
-    --color-level-3: var(--ls-quaternary-background-color);
-    --color-level-4: #d0e6fa;
-    --color-level-5: #bbdaf6;
-    --color-level-6: #a7cef1 */
 }
 
 .bg-indigo-600 {
@@ -280,22 +274,6 @@ html[data-theme=dark] .cp__header a, html[data-theme=dark] a.right-sidebar-butto
 .dark .cp__header a, .dark .cp__header button, .dark .cp__right-sidebar-topbar button{
   color: var(--near-white);
 }
-
-/* emoji */
-/* Replace Inter font with -apple-system for certain emojis */
-/* body {
-  font-variation-settings: "wght" 400;
-}
-body[data-emoji-font="true"] {
-  font-variation-settings: "wght" 400, "opsz" 120;
-} */
-body[data-emoji-font="true"] .emoji {
-  font-family: -apple-system, sans-serif;
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 1;
-}
-
 
 /* ---------------------left sidebar-------------------------- */
 
@@ -362,6 +340,8 @@ body[data-emoji-font="true"] .emoji {
   /* box-shadow: none; */
   border: 1px solid var(--border-color);
 }
+
+/* change new page into search */
 #left-sidebar
   .left-sidebar-inner
   > .flex
@@ -390,6 +370,54 @@ body[data-emoji-font="true"] .emoji {
   font-weight: 400;
   font-size: 0.8125rem;
   color: var(--text-tertiary);
+}
+
+
+
+/* change new page into search */
+#left-sidebar
+  .left-sidebar-inner
+  > .flex
+  .create
+  #create-button
+  > .ls-icon-circle-plus::before {
+  content: "\eb1c";
+  font-family: tabler-icons;
+  /* -webkit-font-smoothing: antialiased; */
+  color: #9ca3af !important;
+}
+#left-sidebar
+  .left-sidebar-inner
+  > .flex
+  .create
+  #create-button
+  > .ls-icon-circle-plus
+  > svg {
+  display: none;
+}
+#left-sidebar .left-sidebar-inner > .flex .create #create-button > span.flex-1 {
+  display: none;
+}
+#left-sidebar .left-sidebar-inner > .flex .create #create-button::after {
+  content: "Search anything...";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
+#create-button::before {
+  content: "\eb1c";
+  font-family: tabler-icons;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 6px;
+}
+
+#create-button > .ti-plus {
+  display: none;
+}
+
+#create-button > span:nth-child(2) {
+  display: none;
 }
 
 /* favorite */
@@ -431,6 +459,19 @@ body[data-emoji-font="true"] .emoji {
   background-image: none;
 }
 
+.left-sidebar-inner .nav-content-item .header:hover{
+  background-color: transparent;
+}
+
+.left-sidebar-inner .nav-content-item .bd ul a:hover{
+  background-color: transparent;
+}
+
+.left-sidebar-inner .nav-content-item .header:hover>span>a:last-child,
+.left-sidebar-inner .nav-content-item.is-expand .header>span>a:last-child{
+  display: none;
+}
+
 /* ---------------------right sidebar-------------------------- */
 
 h1.title {
@@ -465,20 +506,20 @@ h1.title {
 }
 .editor-inner .uniline-block:is(.h4),
 .ls-block :is(h4) {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4285714;
   font-weight: 600;
   /* color: var(--tw-prose-headings); */
 }
 .editor-inner .uniline-block:is(.h5),
 .ls-block :is(h5) {
-  font-size: 14px;
+  font-size: .875rem;
   /* line-height: 1.5555556; */
   font-weight: 700;
   /* color: var(--tw-prose-headings); */
 }
 #main-content-container {
-  font-size: 15px;
+  font-size: .9375rem;
   line-height: 26px;
 }
 textarea {
@@ -692,6 +733,56 @@ blockquote {
   display: none;
 }
 
+/* All Pages */
+tr:nth-child(odd):hover{
+  background-color: var(--bg-secondary);
+}
+
+tr:nth-child(2n):hover{
+  background-color: var(--bg-secondary);
+}
+
+.cp__all_pages .page-ref{
+  font-weight: 500;
+  font-size: .8125rem;
+  color: var(--coolgray-800);
+}
+
+.dark .cp__all_pages .page-ref{
+  color: var(--near-white);
+}
+
+
+.cp__all_pages_table th a{
+  font-weight: 500;
+}
+
+.cp__all_pages_table th a:hover{
+  color: var(--coolgray-500);
+}
+
+.dark .cp__all_pages_table th a:hover{
+  color: var(--near-white);
+}
+
+.cp__header-logo, .fade-link{
+  font-weight: 500;
+  font-size: .8125rem;
+  color:var(--coolgray-500);
+  opacity:1;
+}
+
+.dark .cp__header-logo,.dark .fade-link{
+  color:var(--near-white);
+}
+
+.cp__all_pages .actions .search-wrap .ui__button{
+  color: var(--icon-color);
+}
+
+.cp__all_pages_table .name{
+  width: 300px;}
+
 /* --------------------others--------------------- */
 
 /* menu.menu-link */
@@ -837,6 +928,11 @@ button.pull:hover {
   border:1px solid var(--border-color);
 }
 
+.cp__file-sync-indicator .dropdown-wrapper .ui__button{
+  background-color: var(--accent-color);
+  color: var(--text-quarternary);
+}
+
 .ui__button:hover{
   /* font-weight: 500; */
   color: var(--bg-primary);
@@ -874,7 +970,7 @@ button.pull:hover {
 /* .notification-area */
 .ui__notifications .notification-area {
   background-color: var(--gray-100);
-  font-size: 12px;
+  font-size: .75rem;
   font-weight: 400;
 }
 
